@@ -3,6 +3,10 @@ header.cabecalho {
   letter-spacing: 0.5px;
 }
 
+body{
+   background-color: #11071F;
+}
+
 nav.navbar-inicial{
     background-color: #1A0B2E !important;
 }
@@ -26,4 +30,14 @@ nav.navbar-inicial{
   .navbar-inicial .navbar-nav {
     gap: 9rem;        /* ajuste para o espaçamento horizontal desejado */
   }
+}
+
+.card-roxo {
+    background-color: #11071F !important; /* Força o uso da cor */
+    color: white !important; /* Garante que o texto seja branco */
+}
+
+/* Opcional: Garante que os componentes internos também herdem (ou usem) essa cor */
+.card-roxo .card-body {
+    background-color: #11071F !important;
 }
