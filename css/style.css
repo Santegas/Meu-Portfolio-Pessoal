@@ -1,72 +1,67 @@
 header.cabecalho {
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
 }
 
-body{
-   background-color: #11071F;
+body {
+    background-color: #11071F;
 }
 
-nav.navbar-inicial{
+nav.navbar-inicial {
     background-color: #1A0B2E !important;
 }
 
 @media (max-width: 991px) {
-  .navbar-nav {
-    align-items: flex-start !important;
-    text-align: left;
-  }
+    .navbar-nav {
+        align-items: flex-start !important;
+        text-align: left;
+    }
 }
 
-/* Desktop (a partir de 992px): centraliza os links */
+
 @media (min-width: 992px) {
-  .navbar-collapse {
-    justify-content: center;
-    gap: 9rem;
-  }
+    .navbar-collapse {
+        justify-content: center;
+        gap: 9rem;
+    }
 }
 
 @media (min-width: 992px) {
-  .navbar-inicial .navbar-nav {
-    gap: 9rem;        /* ajuste para o espaçamento horizontal desejado */
-  }
+    .navbar-inicial .navbar-nav {
+        gap: 9rem;
+    }
 }
 
 .card-roxo {
-    background-color: #11071F !important; /* Força o uso da cor */
-    color: white !important; /* Garante que o texto seja branco */
+    background-color: #11071F !important;
+    color: white !important;
 }
 
-/* Opcional: Garante que os componentes internos também herdem (ou usem) essa cor */
+
 .card-roxo .card-body {
     background-color: #11071F !important;
 }
 
-/* 1. Definição da Animação: Brilho Verde Pulsante */
+
 @keyframes pulse-brilho {
-    /* Estado inicial e final (0% e 100% da animação) */
-    0%, 100% {
-        /* Sem sombra (ou sombra padrão do card) */
-        box-shadow: 0 0 0px rgba(18, 224, 150, 0); 
+
+    0%,
+    100% {
+
+        box-shadow: 0 0 0px rgba(18, 224, 150, 0);
     }
-    
-    /* Ponto médio da animação (1 segundo) */
+
+
     50% {
-        /* Aplica o brilho verde máximo no card */
-        box-shadow: 0 0 50px rgba(18, 224, 150, 0.7); 
+
+        box-shadow: 0 0 50px rgba(18, 224, 150, 0.7);
     }
 }
 
-/* 2. Aplica a Animação ao Card de Experiência */
+
 .card-experiencia {
-    /* Garante que o efeito de sombra não seja cortado */
-    overflow: hidden; 
-    
-    /* * Aplica a animação:
-     * - pulse-brilho: nome da animação
-     * - 2s: duração de cada ciclo (2 segundos)
-     * - infinite: repete para sempre
-     * - ease-in-out: suaviza o início e o fim de cada ciclo
-     */
+
+    overflow: hidden;
+
     animation: pulse-brilho 2s infinite ease-in-out;
 }
