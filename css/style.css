@@ -99,3 +99,55 @@ nav.navbar-inicial {
         margin: 0 auto 1rem auto;
     }
 }
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Permite que as tags quebrem a linha */
+    gap: 12px;
+    /* Espaço entre as tags */
+    max-width: 800px;
+}
+
+.skill-tag {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    /* Preenchimento interno */
+    border-radius: 20px;
+    /* Borda bem arredondada */
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    /* Cor do texto (branco) */
+    cursor: default;
+
+    /* Sombra interna sutil para dar o efeito de "pílula" levantada (opcional) */
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Cor de fundo específica para as tags (similar à imagem) */
+.skill-tag.code-tag {
+    background-color: #3b4047;
+    /* Fundo cinza escuro para tags de código */
+}
+
+.skill-tag.db-tag {
+    background-color: #3b4047;
+    /* Fundo cinza escuro para tags de banco de dados */
+}
+
+/* Estilo dos ícones dentro da tag */
+.skill-tag i {
+    margin-right: 8px;
+    /* Espaço entre o ícone e o texto */
+    color: #61dafb;
+    /* Cor de destaque (similar a um azul ciano/React) para os ícones */
+}
+
+/* Ajuste a cor de ícones de banco de dados, se quiser diferenciá-los */
+.skill-tag.db-tag i {
+    color: #4CAF50;
+    /* Exemplo de verde para banco de dados */
+}
