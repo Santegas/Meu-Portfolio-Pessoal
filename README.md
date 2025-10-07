@@ -74,9 +74,9 @@ Durante o desenvolvimento deste portfólio, aprimorei:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seuusuario/seu-repo.git
+git clone https://github.com/Santegas/Meu-Portfolio-Pessoal
 
 # Entre na pasta
-cd seu-repo
+cd Meu-Portfolio-Pessoal
 
 # Abra o arquivo home.html no navegador
