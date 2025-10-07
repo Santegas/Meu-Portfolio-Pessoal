@@ -180,3 +180,103 @@ footer .social-links a {
     min-width: auto;
   }
 }
+
+.contact-card{
+  max-width: 38rem; /* mantém a largura desejada em telas grandes */
+  width: 100%;      /* ocupa 100% do container em telas pequenas */
+  box-sizing: border-box;
+  padding: 0; /* se quiser mais espaçamento interno, ajuste no card-body */
+}
+
+/* ajustes finos para o botão e ícone */
+.contact-card .btn {
+  padding: .75rem 1rem;
+  font-weight: 600;
+}
+
+/* reduz tamanho do ícone em telas pequenas e remove margens problemáticas */
+.contact-card .btn svg {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  display: inline-block;
+}
+
+/* mobile tweaks extras */
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 0; /* mantém o card compacto */
+    margin: 0 1rem; /* pequena margem lateral para "encaixar" no viewport */
+  }
+  #contato h2 {
+    margin: 2rem 0 1.2rem;
+    font-size: 1.25rem;
+  }
+}
+
+.project-card svg {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .project-card svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===== ÍCONES DENTRO DE BOTÕES ===== */
+/* --- Botões com ícones: alinhamento consistente --- */
+.btn {
+  display: inline-flex !important;      /* garante layout flexível para alinhar texto + ícone */
+  align-items: center !important;       /* centraliza verticalmente */
+  justify-content: center;              /* mantém o conteúdo centralizado */
+  gap: .5rem;                            /* espaço entre texto e ícone */
+  white-space: nowrap;                   /* evita que o texto quebre e empurre o ícone para outra linha */
+  padding: .5rem .9rem;                  /* ajuste confortável do padding (troque se quiser) */
+}
+
+/* ícone dentro do botão - tamanho fixo e sem margens que causem overflow */
+.btn svg,
+.btn .bi,          /* caso use classes de ícone (bootstrap icons) */
+.btn i {           /* ou <i class="fab ..."> do fontawesome */
+  display: inline-block !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;     /* zera margens anteriores que empurravam o icon */
+  vertical-align: middle !important;
+  position: relative !important;
+  top: 0 !important;        /* remove top:-1px que pode causar desalinhamento */
+}
+
+/* Se quiser o ícone sempre à direita mas sem quebrar linhas em telas pequenas */
+.btn .icon-right {
+  margin-left: .4rem;
+  margin-right: 0;
+}
+
+/* Ajustes para botões grandes em mobile (se estiver muito grande) */
+@media (max-width: 480px) {
+  .btn {
+    padding: .45rem .7rem;
+    font-size: 0.95rem;
+  }
+  .btn svg,
+  .btn .bi,
+  .btn i {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
