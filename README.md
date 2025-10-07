@@ -79,4 +79,4 @@ git clone https://github.com/Santegas/Meu-Portfolio-Pessoal
 # Entre na pasta
 cd Meu-Portfolio-Pessoal
 
-# Abra o arquivo home.html no navegador
+# Abra o arquivo index.html no navegador
