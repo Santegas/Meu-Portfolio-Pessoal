@@ -2,9 +2,20 @@ header.cabecalho {
     font-size: 1.2rem;
     letter-spacing: 0.5px;
 }
+html, body {
+  height: 100%;
+}
 
 body {
-    background-color: #11071F;
+  min-height: 100vh;
+  /* mantém seu background e evita scroll horizontal */
+  background-color: #11071F;
+  overflow-x: hidden;
+}
+
+/* faz o <main> crescer ocupando o espaço disponível */
+main {
+  flex: 1 0 auto;
 }
 
 nav.navbar-inicial {
@@ -150,4 +161,22 @@ nav.navbar-inicial {
 .skill-tag.db-tag i {
     color: #4CAF50;
     /* Exemplo de verde para banco de dados */
+}
+
+footer {
+  flex-shrink: 0; /* garante que footer não seja comprimido */
+  width: 100%;
+}
+
+/* pequenas melhorias responsivas para os links do footer */
+footer .social-links a {
+  min-width: 180px; /* evita que o texto quebre de forma feia */
+}
+@media (max-width: 576px) {
+  footer .social-links {
+    gap: 0.5rem;
+  }
+  footer .social-links a {
+    min-width: auto;
+  }
 }
